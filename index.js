@@ -12,7 +12,7 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest', '"no-mixed-operators"'],
+    plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest', 'no-mixed-operators', 'simple-import-sort'],
     extends: ['eslint:recommended'],
     rules: {
         // Possible Errors
@@ -89,6 +89,7 @@ module.exports = {
         'no-path-concat': 1,
 
         // Stylistic Issues
+        "simple-import-sort/sort": "warn",
         'array-bracket-spacing': [1, 'never'],
         'block-spacing': [1, 'always'],
         'brace-style': [1, 'allman'],
