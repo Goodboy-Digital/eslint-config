@@ -12,7 +12,7 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest'],
+    plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest', '"no-mixed-operators"'],
     extends: ['eslint:recommended'],
     rules: {
         // Possible Errors
@@ -116,7 +116,8 @@ module.exports = {
         'newline-per-chained-call': [1, { ignoreChainWithDepth: 4 }],
         'no-array-constructor': 1,
         'no-lonely-if': 1,
-        'no-mixed-operators': 1,
+        'no-mixed-operators': "off",
+        "no-mixed-operators/no-mixed-operators": "warn",
         'no-multiple-empty-lines': [1, { max: 1, maxEOF: 1, maxBOF: 0 }],
         'lines-between-class-members': ['warn', 'always', { exceptAfterSingleLine: true }],
         'no-nested-ternary': 1,
