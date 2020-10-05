@@ -190,7 +190,6 @@ module.exports = {
                 "semi": "off",
                 "@typescript-eslint/semi": 1,
                 "dot-notation": "off",
-                "@typescript-eslint/dot-notation": [1, {"allowPrivateClassPropertyAccess": true}],
                 "no-unused-vars": "off",
                 "@typescript-eslint/no-unused-vars": 1,
                 "comma-dangle": "off",
