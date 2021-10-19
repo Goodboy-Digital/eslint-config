@@ -235,12 +235,18 @@ module.exports = {
                 '@typescript-eslint/await-thenable': 'error',
                 '@typescript-eslint/no-for-in-array': 'error',
                 '@typescript-eslint/no-implied-eval': 'error',
-                '@typescript-eslint/no-misused-promises': 'error',
                 '@typescript-eslint/no-unnecessary-type-assertion': 'error',
                 '@typescript-eslint/no-unsafe-return': 'error',
                 '@typescript-eslint/prefer-regexp-exec': 'error',
-                '@typescript-eslint/require-await': 'error',
+                "@typescript-eslint/no-misused-promises": [
+                    "error",
+                    {
+                      "checksConditionals": false,
+                      "checksVoidReturn": false
+                    }
+                ],
                 'require-await': 'off',
+                '@typescript-eslint/require-await': 'off',
             },
         },
     ],
