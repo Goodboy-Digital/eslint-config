@@ -12,7 +12,7 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint', 'eslint-plugin-tsdoc', 'jest', 'no-mixed-operators', 'simple-import-sort'],
+    plugins: ['@typescript-eslint', 'no-mixed-operators', 'simple-import-sort'],
     extends: ['eslint:recommended'],
     rules: {
         // Possible Errors
@@ -157,6 +157,7 @@ module.exports = {
     overrides: [
         {
             files: ['*.test.ts'],
+            plugins: ['jest'],
             rules: {
                 'no-unused-expressions': 'off',
                 'jest/no-disabled-tests': 'error',
@@ -169,6 +170,7 @@ module.exports = {
         {
             files: ['*.ts'],
             extends: ['plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/eslint-recommended'],
+            plugins: ['eslint-plugin-tsdoc'],
             rules: {
                 // typescript: some styles need to be defined twice as the typescript versions will fix certain issues
                 'tsdoc/syntax': 'error',
